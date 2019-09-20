@@ -329,7 +329,7 @@ function TFrmPrincipal.VerificaVitoria2: Boolean;
     begin
       // caso a execução anterior tenha encontrado um vencedor, sai do laço de linhas
       if result then
-        exit;
+        Break;
       // Ao iniciar a linha assumo que houve um ganhador
       result := True;
       // percorre as colunas
@@ -357,7 +357,8 @@ function TFrmPrincipal.VerificaVitoria2: Boolean;
         end;
       end;
     end;
-
+    if Result then
+      intGanhador := jogadorAnterior;
   end;
 
 begin
