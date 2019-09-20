@@ -14,6 +14,7 @@ object FrmPrincipal: TFrmPrincipal
   KeyPreview = True
   OldCreateOrder = False
   Position = poMainFormCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -41,7 +42,6 @@ object FrmPrincipal: TFrmPrincipal
     DefaultColWidth = 135
     DefaultRowHeight = 135
     DrawingStyle = gdsGradient
-    Enabled = False
     FixedColor = clBackground
     FixedCols = 0
     RowCount = 3
@@ -58,6 +58,9 @@ object FrmPrincipal: TFrmPrincipal
     ParentFont = False
     ScrollBars = ssNone
     TabOrder = 0
+    Visible = False
+    OnClick = TabuleiroClick
+    OnDrawCell = TabuleiroDrawCell
   end
   object BtnJogar: TButton
     Left = 677
@@ -42869,7 +42872,7 @@ object FrmPrincipal: TFrmPrincipal
         OnClick = ImgDonutsClick
       end
     end
-    object RadioGroup1: TRadioGroup
+    object RdIniciar: TRadioGroup
       AlignWithMargins = True
       Left = 5
       Top = 177
